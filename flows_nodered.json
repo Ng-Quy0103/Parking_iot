@@ -1,0 +1,1814 @@
+[
+    {
+        "id": "3ce02496ae04cb98",
+        "type": "tab",
+        "label": "NCKH",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0749a82a82d675ed",
+        "type": "mqtt in",
+        "z": "3ce02496ae04cb98",
+        "name": "Sub Temperature",
+        "topic": "room/temperature",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "d0f491d7cefc0f3c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "5905edaf5a375846",
+                "b1d49cc379321999",
+                "907c92374c56d1ba",
+                "e135abd93f433dfb"
+            ]
+        ]
+    },
+    {
+        "id": "e0fc4229a361014a",
+        "type": "mqtt in",
+        "z": "3ce02496ae04cb98",
+        "name": "Sub Humidity",
+        "topic": "room/humidity",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "d0f491d7cefc0f3c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 440,
+        "wires": [
+            [
+                "374bd030ebc8c4d4",
+                "af3dfc0d77e08c1b",
+                "61017929faa6dcc0",
+                "d6a245b85518deba"
+            ]
+        ]
+    },
+    {
+        "id": "1495cc036b4f0794",
+        "type": "mqtt out",
+        "z": "3ce02496ae04cb98",
+        "name": "Humidity to Thingboard",
+        "topic": "v1/devices/me/telemetry",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "17204da74011a36f",
+        "x": 410,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5905edaf5a375846",
+        "type": "ui_chart",
+        "z": "3ce02496ae04cb98",
+        "name": "",
+        "group": "958f666860cff94d",
+        "order": 3,
+        "width": 11,
+        "height": 5,
+        "label": "Temp",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "60",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "374bd030ebc8c4d4",
+        "type": "ui_gauge",
+        "z": "3ce02496ae04cb98",
+        "name": "",
+        "group": "958f666860cff94d",
+        "order": 1,
+        "width": 7,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 380,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b1d49cc379321999",
+        "type": "debug",
+        "z": "3ce02496ae04cb98",
+        "name": "debug 40",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "af3dfc0d77e08c1b",
+        "type": "debug",
+        "z": "3ce02496ae04cb98",
+        "name": "debug 41",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "b9cf4b7e32d2c660",
+        "type": "mqtt in",
+        "z": "3ce02496ae04cb98",
+        "name": "Magnetic",
+        "topic": "room/magnetic",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "d0f491d7cefc0f3c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 980,
+        "y": 100,
+        "wires": [
+            [
+                "e0e283246c8d7078",
+                "a89c2dc8afb17b66",
+                "f0b2292f09193f6f",
+                "10e6a677aa7d069a"
+            ]
+        ]
+    },
+    {
+        "id": "e0e283246c8d7078",
+        "type": "debug",
+        "z": "3ce02496ae04cb98",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a89c2dc8afb17b66",
+        "type": "ui_gauge",
+        "z": "3ce02496ae04cb98",
+        "name": "Electric field",
+        "group": "958f666860cff94d",
+        "order": 2,
+        "width": 7,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Magnetic Field ",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1290,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "1c68908e5eeccb63",
+        "type": "mqtt out",
+        "z": "3ce02496ae04cb98",
+        "name": "Magnetic to Thingboard",
+        "topic": "v1/devices/me/telemetry",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "17204da74011a36f",
+        "x": 1390,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "17b6fa1346c4414a",
+        "type": "mqtt in",
+        "z": "3ce02496ae04cb98",
+        "name": "",
+        "topic": "v1/devices/me/rpc/request/+",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "17204da74011a36f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 1200,
+        "wires": [
+            [
+                "979181164cbe3e7e",
+                "a1b5440fdb1246fc",
+                "aaa011513d61a104"
+            ]
+        ]
+    },
+    {
+        "id": "979181164cbe3e7e",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "function 5",
+        "func": "let szMethod = msg.payload.method;\nlet attr_val = msg.payload.params;\nif (szMethod == 'setThreshold') {\n    msg.type = 1;\n    msg.payload = attr_val;\n} if (szMethod == 'setState') {\n    msg.type = 2;\n    msg.state = attr_val;\n    if (attr_val == true)\n        msg.payload = 1;\n    else\n        msg.payload = 0;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 1200,
+        "wires": [
+            [
+                "37e65baf0f6d4a96"
+            ]
+        ]
+    },
+    {
+        "id": "aaa011513d61a104",
+        "type": "debug",
+        "z": "3ce02496ae04cb98",
+        "name": "RPC msg",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "a1b5440fdb1246fc",
+        "type": "debug",
+        "z": "3ce02496ae04cb98",
+        "name": "RPC topic",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "37e65baf0f6d4a96",
+        "type": "switch",
+        "z": "3ce02496ae04cb98",
+        "name": "",
+        "property": "type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "neq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 1200,
+        "wires": [
+            [
+                "d3eb9a12eb793e8b",
+                "5e96d776d2d2fc25",
+                "c5a9c6ce0a4bef3b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c5a9c6ce0a4bef3b",
+        "type": "ui_text",
+        "z": "3ce02496ae04cb98",
+        "group": "958f666860cff94d",
+        "order": 14,
+        "width": 11,
+        "height": 2,
+        "name": "Slider value",
+        "label": "Value",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 790,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "5e96d776d2d2fc25",
+        "type": "ui_slider",
+        "z": "3ce02496ae04cb98",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "958f666860cff94d",
+        "order": 15,
+        "width": 11,
+        "height": 2,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "200",
+        "step": 1,
+        "className": "",
+        "x": 790,
+        "y": 1180,
+        "wires": [
+            [
+                "a5264d15648191e3",
+                "8ff3913f408be263"
+            ]
+        ]
+    },
+    {
+        "id": "d3eb9a12eb793e8b",
+        "type": "debug",
+        "z": "3ce02496ae04cb98",
+        "name": "debug 49",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "a5264d15648191e3",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "function 6",
+        "func": "var value = msg.payload;\nmsg.payload = { 'threshold': value };\nvar msg1 = { payload: value };\nreturn [msg, msg1];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 1160,
+        "wires": [
+            [
+                "5eddc81f87069259",
+                "0979c60d4a6f8187"
+            ],
+            [
+                "c5a9c6ce0a4bef3b"
+            ]
+        ]
+    },
+    {
+        "id": "5eddc81f87069259",
+        "type": "mqtt out",
+        "z": "3ce02496ae04cb98",
+        "name": "",
+        "topic": "v1/devices/me/attributes",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "17204da74011a36f",
+        "x": 1210,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "8ff3913f408be263",
+        "type": "debug",
+        "z": "3ce02496ae04cb98",
+        "name": "debug 50",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "0979c60d4a6f8187",
+        "type": "mqtt out",
+        "z": "3ce02496ae04cb98",
+        "name": "",
+        "topic": "room/threshold",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d0f491d7cefc0f3c",
+        "x": 1210,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "e612ead3b531d144",
+        "type": "mqtt out",
+        "z": "3ce02496ae04cb98",
+        "name": "Temperature to Thingsboard",
+        "topic": "v1/devices/me/telemetry",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "17204da74011a36f",
+        "x": 520,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "907c92374c56d1ba",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Convert to JSON",
+        "func": "var value = msg.payload\nmsg.payload = {'temperature':value};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 80,
+        "wires": [
+            [
+                "e612ead3b531d144"
+            ]
+        ]
+    },
+    {
+        "id": "61017929faa6dcc0",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Convert to JSON",
+        "func": "var value = msg.payload\nmsg.payload = {'humidity':value};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "1495cc036b4f0794"
+            ]
+        ]
+    },
+    {
+        "id": "f0b2292f09193f6f",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Convert to JSON",
+        "func": "var value = msg.payload\nmsg.payload = {'magnetic':value};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 40,
+        "wires": [
+            [
+                "1c68908e5eeccb63"
+            ]
+        ]
+    },
+    {
+        "id": "94bc485ffba1412e",
+        "type": "mqtt in",
+        "z": "3ce02496ae04cb98",
+        "name": "current",
+        "topic": "charging/current",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "d0f491d7cefc0f3c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 790,
+        "y": 440,
+        "wires": [
+            [
+                "c13d295629ccbd13",
+                "ec6720f3f016776c",
+                "6fb291bdda3bd1ca",
+                "7f3fcd65af7c4760"
+            ]
+        ]
+    },
+    {
+        "id": "c13d295629ccbd13",
+        "type": "debug",
+        "z": "3ce02496ae04cb98",
+        "name": "debug current",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "86f35f2b2977c9c7",
+        "type": "ui_gauge",
+        "z": "3ce02496ae04cb98",
+        "name": "Voltage",
+        "group": "958f666860cff94d",
+        "order": 4,
+        "width": 7,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Voltage",
+        "label": "V",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 340,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "f03afe5e17c03f0f",
+        "type": "debug",
+        "z": "3ce02496ae04cb98",
+        "name": "debug voltage",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 320,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "71f849400f06d68b",
+        "type": "mqtt in",
+        "z": "3ce02496ae04cb98",
+        "name": "voltage",
+        "topic": "charging/voltage",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "d0f491d7cefc0f3c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 720,
+        "wires": [
+            [
+                "86f35f2b2977c9c7",
+                "f03afe5e17c03f0f",
+                "610743a852fa86f8",
+                "b2df93f028a79a4d"
+            ]
+        ]
+    },
+    {
+        "id": "ec6720f3f016776c",
+        "type": "ui_gauge",
+        "z": "3ce02496ae04cb98",
+        "name": "Current",
+        "group": "958f666860cff94d",
+        "order": 5,
+        "width": 7,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Current",
+        "label": "mA",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4000",
+        "colors": [
+            "#3000b3",
+            "#e6e600",
+            "#cb3a41"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1020,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "6fb291bdda3bd1ca",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare Current JSON",
+        "func": "msg.payload = {\n    \"current\": parseFloat(msg.payload)\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 340,
+        "wires": [
+            [
+                "7bce7777d06060ef"
+            ]
+        ]
+    },
+    {
+        "id": "7bce7777d06060ef",
+        "type": "mqtt out",
+        "z": "3ce02496ae04cb98",
+        "name": "Current to ThingsBoard",
+        "topic": "v1/devices/me/telemetry",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "17204da74011a36f",
+        "x": 1210,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a782c0f2d04caba9",
+        "type": "mqtt in",
+        "z": "3ce02496ae04cb98",
+        "name": "Car Status",
+        "topic": "vehicle/distance",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "d0f491d7cefc0f3c",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 70,
+        "y": 980,
+        "wires": [
+            [
+                "45afc834cacbe32f",
+                "887ab02483c03ebc",
+                "47b2e029e36de622",
+                "65a90a572a9f5e13"
+            ]
+        ]
+    },
+    {
+        "id": "45afc834cacbe32f",
+        "type": "ui_text",
+        "z": "3ce02496ae04cb98",
+        "group": "958f666860cff94d",
+        "order": 10,
+        "width": 11,
+        "height": 2,
+        "name": "",
+        "label": "Trạng thái xe ",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 340,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "887ab02483c03ebc",
+        "type": "debug",
+        "z": "3ce02496ae04cb98",
+        "name": "debug car status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 310,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "1bf5d42516e15a84",
+        "type": "mqtt in",
+        "z": "3ce02496ae04cb98",
+        "name": "Battery Status",
+        "topic": "charging/status",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "d0f491d7cefc0f3c",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 700,
+        "y": 640,
+        "wires": [
+            [
+                "3d1d7a59ddaddb89",
+                "34e68581c131d9f3",
+                "a3fd2e9d1782ab83",
+                "22b29814fac0dd06",
+                "92990c7c68e24d99"
+            ]
+        ]
+    },
+    {
+        "id": "3d1d7a59ddaddb89",
+        "type": "ui_text",
+        "z": "3ce02496ae04cb98",
+        "group": "958f666860cff94d",
+        "order": 11,
+        "width": 11,
+        "height": 2,
+        "name": "",
+        "label": "Trạng thái pin",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 940,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "34e68581c131d9f3",
+        "type": "debug",
+        "z": "3ce02496ae04cb98",
+        "name": "debug battery status",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "09b5839dfbcc85c7",
+        "type": "mqtt out",
+        "z": "3ce02496ae04cb98",
+        "name": "Battery Status to ThingsBoard",
+        "topic": "v1/devices/me/telemetry",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "17204da74011a36f",
+        "x": 1270,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "a3fd2e9d1782ab83",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare Battery Status JSON",
+        "func": "msg.payload = {\n    \"battery_status\": msg.payload\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 620,
+        "wires": [
+            [
+                "09b5839dfbcc85c7"
+            ]
+        ]
+    },
+    {
+        "id": "d5c8257d2b912f10",
+        "type": "ui_table",
+        "z": "3ce02496ae04cb98",
+        "group": "958f666860cff94d",
+        "name": "Valid Cards Table",
+        "order": 12,
+        "width": 14,
+        "height": 7,
+        "columns": [
+            {
+                "field": "uid",
+                "title": "UID",
+                "width": "70%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "delete",
+                "title": "Delete",
+                "width": "30%",
+                "align": "center",
+                "formatter": "button",
+                "formatterParams": {
+                    "label": "Delete",
+                    "class": "delete-btn"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": false,
+        "x": 430,
+        "y": 1460,
+        "wires": [
+            [
+                "6c6550685310d346"
+            ]
+        ]
+    },
+    {
+        "id": "6c6550685310d346",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Remove Card",
+        "func": "let uidToRemove = msg.payload.uid.toLowerCase();\nif (!uidToRemove) return null;\nlet validCards = flow.get(\"validCards\") || [];\nvalidCards = validCards.filter(uid => uid !== uidToRemove);\nflow.set(\"validCards\", validCards);\nmsg.payload = validCards.map(uid => ({ uid }));\nmsg.validCards = validCards;\nmsg.path = \"rfid/validCards\";\nmsg.data = validCards.reduce((obj, uid) => {\n    obj[uid] = { uid: uid };\n    return obj;\n}, {});\nreturn [msg, msg];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 1460,
+        "wires": [
+            [
+                "d5c8257d2b912f10",
+                "6c8fbc17eee8eea1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "2fb19ac2295df90a",
+        "type": "ui_text_input",
+        "z": "3ce02496ae04cb98",
+        "name": "Add Card Input",
+        "label": "Enter UID to Add:",
+        "tooltip": "",
+        "group": "958f666860cff94d",
+        "order": 13,
+        "width": 11,
+        "height": 2,
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 340,
+        "y": 1540,
+        "wires": [
+            [
+                "22bed087518e7783"
+            ]
+        ]
+    },
+    {
+        "id": "22bed087518e7783",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Add Card",
+        "func": "let uidToAdd = msg.payload.toLowerCase();\nif (!uidToAdd || typeof uidToAdd !== \"string\" || uidToAdd.trim() === \"\") {\n    return null;\n}\nlet validCards = flow.get(\"validCards\") || [];\nif (!validCards.includes(uidToAdd)) {\n    validCards.push(uidToAdd);\n}\nflow.set(\"validCards\", validCards);\nmsg.payload = validCards.map(uid => ({ uid }));\nmsg.validCards = validCards;\nmsg.path = \"rfid/validCards\";\nmsg.data = validCards.reduce((obj, uid) => {\n    obj[uid] = { uid: uid };\n    return obj;\n}, {});\nreturn [msg, msg];",
+        "outputs": 2,
+        "x": 630,
+        "y": 1540,
+        "wires": [
+            [
+                "d5c8257d2b912f10",
+                "6c8fbc17eee8eea1"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6c8fbc17eee8eea1",
+        "type": "mqtt out",
+        "z": "3ce02496ae04cb98",
+        "name": "Send Valid Cards to ThingsBoard",
+        "topic": "v1/devices/me/telemetry",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "17204da74011a36f",
+        "x": 940,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "2b1d6a2804ac3b8c",
+        "type": "mqtt in",
+        "z": "3ce02496ae04cb98",
+        "name": "📡 Nhận UID RFID",
+        "topic": "rfid/scan",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "d0f491d7cefc0f3c",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 870,
+        "y": 1380,
+        "wires": [
+            [
+                "edb9db89421a6035",
+                "916ac89a41f20b37",
+                "efc47765d7c0495b"
+            ]
+        ]
+    },
+    {
+        "id": "edb9db89421a6035",
+        "type": "ui_text",
+        "z": "3ce02496ae04cb98",
+        "group": "958f666860cff94d",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "name": "🏷️ UID Thẻ",
+        "label": "UID Đang Quét:",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1060,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "916ac89a41f20b37",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "✅ Kiểm tra UID hợp lệ",
+        "func": "let uid = msg.payload.trim().toLowerCase();\nlet validCards = flow.get(\"validCards\") || [];\nnode.warn(\"Danh sách validCards: \" + JSON.stringify(validCards));\nlet isValid = validCards.includes(uid);\nmsg.payload = {\n    valid: isValid,\n    uid: uid,\n    statusMessage: isValid ? \"Thẻ RFID hợp lệ\" : \"Thẻ RFID không hợp lệ\"\n};\nmsg.rfidStatus = isValid ? \"Thẻ RFID hợp lệ\" : \"Thẻ RFID không hợp lệ\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 1440,
+        "wires": [
+            [
+                "58f0bb210fc62814",
+                "01baa9d3baf902a5",
+                "42864e78325cfb3d",
+                "10cdbac27ecf5679"
+            ]
+        ]
+    },
+    {
+        "id": "01baa9d3baf902a5",
+        "type": "mqtt out",
+        "z": "3ce02496ae04cb98",
+        "name": "Gửi trạng thái thẻ",
+        "topic": "rfid/status",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "d0f491d7cefc0f3c",
+        "x": 1330,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "58f0bb210fc62814",
+        "type": "ui_text",
+        "z": "3ce02496ae04cb98",
+        "group": "958f666860cff94d",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "name": "📢 Trạng thái thẻ",
+        "label": "Trạng thái thẻ:",
+        "format": "{{msg.payload.statusMessage}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#FF0000",
+        "x": 1330,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "42864e78325cfb3d",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare RFID Status JSON",
+        "func": "msg.payload = {\n    \"rfid_status\": msg.payload.statusMessage,\n    \"rfid_uid\": msg.payload.uid,\n    \"rfid_valid\": msg.payload.valid\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1330,
+        "y": 1500,
+        "wires": [
+            [
+                "aa22cc982fc8aebe"
+            ]
+        ]
+    },
+    {
+        "id": "aa22cc982fc8aebe",
+        "type": "mqtt out",
+        "z": "3ce02496ae04cb98",
+        "name": "RFID Status to ThingsBoard",
+        "topic": "v1/devices/me/telemetry",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "17204da74011a36f",
+        "x": 1590,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "d7bc1a41719588c3",
+        "type": "mqtt out",
+        "z": "3ce02496ae04cb98",
+        "name": "Voltage to ThingsBoard",
+        "topic": "v1/devices/me/telemetry",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "17204da74011a36f",
+        "x": 490,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "610743a852fa86f8",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare Voltage JSON",
+        "func": "msg.payload = {\n    \"voltage\": parseFloat(msg.payload)\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 600,
+        "wires": [
+            [
+                "d7bc1a41719588c3"
+            ]
+        ]
+    },
+    {
+        "id": "47b2e029e36de622",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare Car Status JSON",
+        "func": "msg.payload = {\n    \"car_status\": msg.payload\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 940,
+        "wires": [
+            [
+                "4de0babcb59c0723"
+            ]
+        ]
+    },
+    {
+        "id": "4de0babcb59c0723",
+        "type": "mqtt out",
+        "z": "3ce02496ae04cb98",
+        "name": "Car Status to ThingsBoard",
+        "topic": "v1/devices/me/telemetry",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "17204da74011a36f",
+        "x": 600,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "3524bd13b2fed276",
+        "type": "mqtt in",
+        "z": "3ce02496ae04cb98",
+        "name": "Charging Warning",
+        "topic": "charging/warning",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "d0f491d7cefc0f3c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 870,
+        "y": 860,
+        "wires": [
+            [
+                "8230184e4a631606",
+                "adbac2c63c986df3"
+            ]
+        ]
+    },
+    {
+        "id": "8230184e4a631606",
+        "type": "ui_text",
+        "z": "3ce02496ae04cb98",
+        "group": "958f666860cff94d",
+        "order": 16,
+        "width": 11,
+        "height": 2,
+        "name": "Charging Warning",
+        "label": "Cảnh báo sạc",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#FF0000",
+        "x": 1070,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "adbac2c63c986df3",
+        "type": "debug",
+        "z": "3ce02496ae04cb98",
+        "name": "Debug Warning",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "22b29814fac0dd06",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Clear Warning on Stop",
+        "func": "if (msg.payload === \"stopped\") {\n    msg.payload = \"\";\n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 800,
+        "wires": [
+            [
+                "8230184e4a631606"
+            ]
+        ]
+    },
+    {
+        "id": "efc47765d7c0495b",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Update Charging UID",
+        "func": "let currentStatus = global.get(\"chargingStatus\") || \"stopped\";\nlet uid = msg.payload.trim().toLowerCase();\nif (currentStatus === \"charging\") {\n    global.set(\"chargingUID\", uid);\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e135abd93f433dfb",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare Temperature Firebase",
+        "func": "var value = parseFloat(msg.payload);\nif (isNaN(value)) return null;\nmsg.path = 'sensors/temperature/' + new Date().toISOString().replace(/[:.]/g, '-');\nmsg.payload = {\n    value: value,\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 240,
+        "wires": [
+            [
+                "862f8c9882c35554"
+            ]
+        ]
+    },
+    {
+        "id": "862f8c9882c35554",
+        "type": "firebase modify",
+        "z": "3ce02496ae04cb98",
+        "name": "Save Temperature",
+        "firebaseconfig": "",
+        "childpath": "sensors/temperature",
+        "method": "push",
+        "value": "msg.payload",
+        "priority": "",
+        "x": 750,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10e6a677aa7d069a",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare Magnetic Firebase",
+        "func": "var value = parseFloat(msg.payload);\nif (isNaN(value)) return null;\nmsg.path = 'sensors/magnetic/' + new Date().toISOString().replace(/[:.]/g, '-');\nmsg.payload = {\n    value: value,\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 240,
+        "wires": [
+            [
+                "10679c5f7c659edd"
+            ]
+        ]
+    },
+    {
+        "id": "10679c5f7c659edd",
+        "type": "firebase modify",
+        "z": "3ce02496ae04cb98",
+        "name": "Save Magnetic",
+        "firebaseconfig": "",
+        "childpath": "sensors/Magnetic",
+        "method": "push",
+        "value": "msg.payload",
+        "priority": "",
+        "x": 1520,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6a245b85518deba",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare Humidity Firebase",
+        "func": "var value = parseFloat(msg.payload);\nif (isNaN(value)) return null;\nmsg.path = 'sensors/humidity/' + new Date().toISOString().replace(/[:.]/g, '-');\nmsg.payload = {\n    value: value,\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [
+                "7b36178fe8e1a33b"
+            ]
+        ]
+    },
+    {
+        "id": "7b36178fe8e1a33b",
+        "type": "firebase modify",
+        "z": "3ce02496ae04cb98",
+        "name": "Save Humidity",
+        "firebaseconfig": "",
+        "childpath": "sensors/humidity",
+        "method": "push",
+        "value": "msg.payload",
+        "priority": "",
+        "x": 580,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f3fcd65af7c4760",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare Current Firebase",
+        "func": "var value = parseFloat(msg.payload);\nif (isNaN(value)) return null;\nmsg.path = 'sensors/current/' + new Date().toISOString().replace(/[:.]/g, '-');\nmsg.payload = {\n    value: value,\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 500,
+        "wires": [
+            [
+                "fac1421889f66008"
+            ]
+        ]
+    },
+    {
+        "id": "fac1421889f66008",
+        "type": "firebase modify",
+        "z": "3ce02496ae04cb98",
+        "name": "Save Current",
+        "firebaseconfig": "",
+        "childpath": "sensors/Current",
+        "method": "push",
+        "value": "msg.payload",
+        "priority": "",
+        "x": 1260,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b2df93f028a79a4d",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare Voltage Firebase",
+        "func": "var value = parseFloat(msg.payload);\nif (isNaN(value)) return null;\nmsg.path = 'sensors/voltage/' + new Date().toISOString().replace(/[:.]/g, '-');\nmsg.payload = {\n    value: value,\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 840,
+        "wires": [
+            [
+                "b27a69dec6e79a11"
+            ]
+        ]
+    },
+    {
+        "id": "b27a69dec6e79a11",
+        "type": "firebase modify",
+        "z": "3ce02496ae04cb98",
+        "name": "Save Voltage",
+        "firebaseconfig": "",
+        "childpath": "sensors/voltage",
+        "method": "push",
+        "value": "msg.payload",
+        "priority": "",
+        "x": 460,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92990c7c68e24d99",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare Battery Status Firebase",
+        "func": "msg.path = 'status/battery/' + new Date().toISOString().replace(/[:.]/g, '-');\nmsg.payload = {\n    value: msg.payload,\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 580,
+        "wires": [
+            [
+                "ba210f76efa150a3"
+            ]
+        ]
+    },
+    {
+        "id": "ba210f76efa150a3",
+        "type": "firebase modify",
+        "z": "3ce02496ae04cb98",
+        "name": "Save Battery Status",
+        "firebaseconfig": "",
+        "childpath": "sensors/Battery_status",
+        "method": "push",
+        "value": "msg.payload",
+        "priority": "",
+        "x": 1280,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "65a90a572a9f5e13",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare Car Status Firebase",
+        "func": "msg.path = 'status/car/' + new Date().toISOString().replace(/[:.]/g, '-');\nmsg.payload = {\n    value: msg.payload,\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 1140,
+        "wires": [
+            [
+                "de0bbb543c04fa79"
+            ]
+        ]
+    },
+    {
+        "id": "de0bbb543c04fa79",
+        "type": "firebase modify",
+        "z": "3ce02496ae04cb98",
+        "name": "Save Car Status",
+        "firebaseconfig": "",
+        "childpath": "sensors/Car _status",
+        "method": "push",
+        "value": "msg.payload",
+        "priority": "",
+        "x": 510,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10cdbac27ecf5679",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Prepare RFID Firebase",
+        "func": "msg.path = 'rfid/status/' + new Date().toISOString().replace(/[:.]/g, '-');\nmsg.payload = {\n    uid: msg.payload.uid,\n    valid: msg.payload.valid,\n    statusMessage: msg.payload.statusMessage,\n    timestamp: new Date().toISOString()\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 1600,
+        "wires": [
+            [
+                "31e31e591751e7c8"
+            ]
+        ]
+    },
+    {
+        "id": "31e31e591751e7c8",
+        "type": "firebase modify",
+        "z": "3ce02496ae04cb98",
+        "name": "Save RFID Status",
+        "firebaseconfig": "",
+        "childpath": "sensors/RFID_status",
+        "method": "push",
+        "value": "msg.payload",
+        "priority": "",
+        "x": 1530,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "794eb4174dd660f6",
+        "type": "inject",
+        "z": "3ce02496ae04cb98",
+        "name": "Initialize Valid Cards",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[\"03651a0f\", \"83bbbdf7\", \"727d8886\"]",
+        "payloadType": "json",
+        "x": 280,
+        "y": 1660,
+        "wires": [
+            [
+                "bfdcaef98edcfa70"
+            ]
+        ]
+    },
+    {
+        "id": "bfdcaef98edcfa70",
+        "type": "function",
+        "z": "3ce02496ae04cb98",
+        "name": "Set Valid Cards",
+        "func": "let validCards = msg.payload.map(uid => uid.toLowerCase());\nflow.set(\"validCards\", validCards);\nmsg.payload = validCards.map(uid => ({ uid }));\nmsg.validCards = validCards;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1660,
+        "wires": [
+            [
+                "d5c8257d2b912f10",
+                "6c8fbc17eee8eea1"
+            ]
+        ]
+    },
+    {
+        "id": "973664d231d8b006",
+        "type": "ui_spacer",
+        "z": "3ce02496ae04cb98",
+        "name": "spacer",
+        "group": "958f666860cff94d",
+        "order": 7,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "13b42851d0be4cec",
+        "type": "ui_spacer",
+        "z": "3ce02496ae04cb98",
+        "name": "spacer",
+        "group": "958f666860cff94d",
+        "order": 9,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "d0f491d7cefc0f3c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "17204da74011a36f",
+        "type": "mqtt-broker",
+        "name": "demo.thingsboard.io",
+        "broker": "demo.thingsboard.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "958f666860cff94d",
+        "type": "ui_group",
+        "name": "DATA STATION",
+        "tab": "60299c9260d08766",
+        "order": 1,
+        "disp": true,
+        "width": "25",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "60299c9260d08766",
+        "type": "ui_tab",
+        "name": "CHARGING STATION",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
